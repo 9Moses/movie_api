@@ -27,6 +27,12 @@ namespace Movie_API.Controllers
             return new JsonResult(Ok(movie));
         }
         //list all Movie
+        [HttpGet]
+        public JsonResult GetAll()
+        {
+            var result = _context.Movies.ToList();
+            return new JsonResult(Ok(result));
+        }
         //list one movie
         //edit
         //delete
